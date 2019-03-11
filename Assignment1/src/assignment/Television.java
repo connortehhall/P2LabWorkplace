@@ -13,6 +13,7 @@ public class Television {
 		this.channel = 1;
 		this.volume = 0;
 		this.maxChannel = 10;
+		this.power = false;
 	}
 	
 	// setting maxChannel
@@ -27,33 +28,42 @@ public class Television {
 			this.maxChannel = max;
 		}
 	}
-	
+	/*
 	public Television(boolean power, int channel, int volume, int maxChannel)
 	{
 		this.setPower(power);
 		this.setChannel(channel, maxChannel);
 		this.setVolume(volume);
 	}
+	*/
 	
 	// power
 	public void setPower(boolean power)
 	{
 		this.power = power;
 	}
-	public boolean getPower(boolean power)
+	public boolean getPower()
 	{
 		return power;
 	}
 	
 	// channel
-	public void setChannel(int channel, int maxChannel)
+	public void setChannel(int modifier)
 	{
-		if (channel >= 1 && channel <= 10)
+		if (channel + modifier == 0)
 		{
-			this.channel = channel;
+			this.channel = maxChannel;
+		}
+		else if (channel + modifier == maxChannel + 1)
+		{
+			this.channel = 1;
+		}
+		else
+		{
+			this.channel += modifier;
 		}
 	}
-	public int getChannel(int channel)
+	public int getChannel()
 	{
 		return channel;
 	}
@@ -69,14 +79,18 @@ public class Television {
 		{
 			this.volume = 0;
 		}
+		else
+		{
+			this.volume = volume;
+		}
 	}
-	public int getVolume(int volume)
+	public int getVolume()
 	{
 		return volume;
 	}
 	
 	// max channel
-	public int getMaxChannel(int maxChannel)
+	public int getMaxChannel()
 	{
 		return maxChannel;
 	}
