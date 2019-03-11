@@ -12,8 +12,8 @@ public class Television {
 	{
 		this.channel = 1;
 		this.volume = 0;
-		this.maxChannel = 10;
 		this.power = false;
+		this.maxChannel = 10;
 	}
 	
 	// setting maxChannel

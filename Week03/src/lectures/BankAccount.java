@@ -30,8 +30,9 @@ public class BankAccount {
 	public void setHolderName(String name) {
 		if ((name != null) && (name != "")) {
 			this.holderName = name;
-		} else
+		} else {
 			this.holderName = "Anonymous";
+		}
 	}
 
 	public void deposit(double amount) {
