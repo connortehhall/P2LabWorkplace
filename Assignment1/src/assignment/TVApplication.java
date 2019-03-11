@@ -27,11 +27,13 @@ public class TVApplication {
 			}
 			else if (button == 2)
 			{
-				
+				rc.volumeUpByHalf();
+				System.out.println("Volume Up by 50% Button Pressed");
 			}
 			else if (button == 3)
 			{
-				
+				rc.volumeDownByHalf();
+				System.out.println("Volume Down by 50% Button Pressed");
 			}
 			else if (button == 4)
 			{
@@ -48,12 +50,6 @@ public class TVApplication {
 			{
 				System.out.println("\n" + tv.toString(tv.getPower(), tv.getChannel(), tv.getVolume()) + "\n");
 			}
-			
 		}
-		
-		// System.out.println(tv.getPower());
-		
-		// Sem.out.println(tv.toString(true, 2, 50));
 	}
-
 }

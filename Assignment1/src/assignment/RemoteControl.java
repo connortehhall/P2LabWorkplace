@@ -9,7 +9,6 @@ public class RemoteControl {
 		this.tv = tv;
 	}
 	
-	
 	// switches tv on or off
 	public void powerButton()
 	{
@@ -42,21 +41,20 @@ public class RemoteControl {
 	}
 	
 	// increases volume by 50%
-	public void volumeDownByHalf()
-	{
-		if (tv.getPower() == true)
-		{
-			
-		}
-	}
-
-	// decreases volume by 50%
 	public void volumeUpByHalf()
 	{
 		if (tv.getPower() == true)
 		{
-			
+			tv.volumeUp(50);
 		}
 	}
 
+	// decreases volume by 50%
+	public void volumeDownByHalf()
+	{
+		if (tv.getPower() == true)
+		{
+			tv.volumeDown(-50);
+		}
+	}
 }

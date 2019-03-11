@@ -19,6 +19,9 @@ public class Television {
 	// setting maxChannel
 	public Television(int max)
 	{
+		this.channel = 1;
+		this.volume = 0;
+		this.power = false;
 		if (max < 2)
 		{
 			this.maxChannel = 10;
@@ -28,14 +31,6 @@ public class Television {
 			this.maxChannel = max;
 		}
 	}
-	/*
-	public Television(boolean power, int channel, int volume, int maxChannel)
-	{
-		this.setPower(power);
-		this.setChannel(channel, maxChannel);
-		this.setVolume(volume);
-	}
-	*/
 	
 	// power
 	public void setPower(boolean power)
@@ -96,15 +91,17 @@ public class Television {
 	}
 	
 	// moves volume down by 1%
-	public void volumeDown(int volume)
-	{
-		this.volume = volume - 1;
+	public void volumeDown(int modifier)
+	{	
+		this.volume = volume + modifier;
+		setVolume(volume);
 	}
 	
 	// moves volume up by 1%
-	public void volumeUp(int volume)
+	public void volumeUp(int modifier)
 	{
-		this.volume = volume + 1;
+		this.volume = volume + modifier;
+		setVolume(volume);
 	}
 	
 	// toString
@@ -121,7 +118,7 @@ public class Television {
 			result += "NO. ";
 		}
 		
-		result += "CHANNEL: " + channel + "/10. VOLUME: " + volume + "%";
+		result += "CHANNEL: " + channel + "/" + maxChannel + ". VOLUME: " + volume + "%";
 		
 		if (volume == 0)
 		{
