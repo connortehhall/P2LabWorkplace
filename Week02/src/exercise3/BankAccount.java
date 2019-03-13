@@ -5,9 +5,9 @@ public class BankAccount {
 	public String name;
 	public String code;
 	
-	public BankAccount(String fullName, String accountCode)
+	public BankAccount(String name, String code)
 	{
-		this.name = fullName;
-		this.code = accountCode;
+		this.name = name;
+		this.code = code;
 	}
 }

@@ -2,10 +2,10 @@ package exercise5;
 
 public class Person {
 	
-	private int age;
-	private double weight;
-	private boolean student;
-	private char gender;
+	public int age;
+	public double weight;
+	public boolean student;
+	public char gender;
 
 	// default constructor
 	public Person()
