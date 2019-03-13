@@ -9,7 +9,7 @@ public class TVApplication {
 		Television tv = new Television();
 		RemoteControl rc = new RemoteControl(tv);
 		
-		System.out.println(tv.toString(false, 1, 0) + "\n");
+		System.out.println(tv.toString() + "\n");
 		
 		int button = 0;
 		
@@ -48,7 +48,7 @@ public class TVApplication {
 			
 			if (button != 6)
 			{
-				System.out.println("\n" + tv.toString(tv.getPower(), tv.getChannel(), tv.getVolume()) + "\n");
+				System.out.println("\n" + tv.toString() + "\n");
 			}
 		}
 	}

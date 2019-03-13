@@ -90,14 +90,14 @@ public class Television {
 		return maxChannel;
 	}
 	
-	// moves volume down by 1%
+	// moves volume down
 	public void volumeDown(int modifier)
 	{	
 		this.volume = volume + modifier;
 		setVolume(volume);
 	}
 	
-	// moves volume up by 1%
+	// moves volume up
 	public void volumeUp(int modifier)
 	{
 		this.volume = volume + modifier;
@@ -105,7 +105,7 @@ public class Television {
 	}
 	
 	// toString
-	public String toString(boolean power, int channel, int volume)
+	public String toString()
 	{
 		String result = "[Television is: on? ";
 		

@@ -6,8 +6,6 @@ public class Prescription {
 	private String startDate;
 	private int nWeeksRepeat;
 	private double dosage;
-
-
 	
 	public double getDosage()
 	{
