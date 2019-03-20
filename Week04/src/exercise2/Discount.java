@@ -20,9 +20,6 @@ public class Discount {
 		
 		Person person = new Person(fn, ln, age, student);
 		
-		System.out.println("Your discount is: " + person.computeDiscount(person.getAge(), person.getStudent()));
-		
-		
+		System.out.println("Your discount is: " + person.computeDiscount(person.getAge(), person.getStudent()));	
 	}
-
 }
