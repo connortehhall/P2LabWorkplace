@@ -46,11 +46,6 @@ public class GameAccount implements Serializable {
 		this.score = score;
 	}
 
-	
-
-
-
-	
 	public static void main(String[] args) 
 	{
 		
